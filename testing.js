@@ -8,3 +8,5 @@ ctx.fillRect(0,0,600,600)
 ctx.beginPath()
 ctx.arc(300,300,2,0,6.28,false)
 ctx.stroke()
+
+

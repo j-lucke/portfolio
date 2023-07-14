@@ -1,14 +1,10 @@
 let selectedProject = null
 const projects = document.querySelectorAll('.project')
-//projects.push(document.getElementById('intro'))
-//console.log(projects)
+
 
 document.addEventListener('click', (event) => {
-    console.log('distances')
     projects.forEach( p => {
-        console.log(p.id, f(p))
     })
-    console.log()
 })
 
 function f(node) {
@@ -18,7 +14,7 @@ function f(node) {
     return Math.abs(midScreen - midNode)
 }
 
-function select() {
+function selectProject() {
     let min = f(projects[0])
     let project = projects[0]
 
@@ -40,7 +36,7 @@ function select() {
 
 document.addEventListener('scroll', (event) => {
     old = selectedProject
-    selectedProject = select()
+    selectedProject = selectProject()
     if (selectedProject != null) {
         selectedProject.classList.add('onstage')
     }
@@ -49,30 +45,10 @@ document.addEventListener('scroll', (event) => {
             old.classList.remove('onstage')
         }
     }
-    if (selectedProject != null)
-        console.log(selectedProject.id)
 })
 
-
-/*
-function select() {
-    if (selectedProject != null) {
-        console.log(selectedProject)
-    }
-    for (let i = 0; i < projects.length; i++) {
-        const y = projects[i].y + projects[i].height / 2
-        if (y > 0 && y < window.innerHeight) {
-            return projects[i]
-        }
-    }
-    return null
-}
-
-document.addEventListener('click', () => {
-    projects.forEach(x => {
-        console.log(x)})
+document.addEventListener('keypress', () => {
+    points.forEach( p => {
+        console.log(`points.push(new Point(${p.x}, ${p.y}))`)
+    })
 })
-
-*/
-
-

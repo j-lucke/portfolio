@@ -3,6 +3,7 @@ const canvas = document.querySelector('canvas')
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
 ctx = canvas.getContext('2d')
+ctx.lineWidth = 2
 const width = 1000
 const height = 500
 let rect = canvas.getBoundingClientRect();
@@ -58,10 +59,10 @@ function Point(x, y, r, c) {
 
 const levels = []
 const points = []
-points.push(new Point(300, 10, 2, 'pink'))
-points.push(new Point(200, 100, 2, 'pink'))
-points.push(new Point(700, 300, 2, 'pink'))
-points.push(new Point(800, 400, 2, 'pink'))
+points.push(new Point(300, 10, 5, 'pink'))
+points.push(new Point(200, 100, 5, 'pink'))
+points.push(new Point(700, 300, 5, 'pink'))
+points.push(new Point(800, 400, 5, 'pink'))
 points.draw = drawLevel
 levels.push(points)
 
@@ -77,9 +78,7 @@ levels.draw = function() {
     ctx.beginPath()
     ctx.moveTo(levels[0][0].x, levels[0][0].y)
     ctx.bezierCurveTo(levels[0][1].x, levels[0][1].y, levels[0][2].x, levels[0][2].y, levels[0][3].x, levels[0][3].y)
-    ctx.lineWidth = 10
     ctx.stroke()
-    ctx.lineWidth = 1
 }
 
 let selectedPoint = null
@@ -120,7 +119,7 @@ setInterval( () => {
 
     const p = levels[3][0]
     const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, 1000)
-    gradient.addColorStop(.9, 'white')
+    gradient.addColorStop(.6, 'white')
     gradient.addColorStop(0.2, "rgba(224, 236, 255, 1)")
     gradient.addColorStop(0, 'rgb(224, 253, 255)')
     ctx.fillStyle = gradient

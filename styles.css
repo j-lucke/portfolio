@@ -90,6 +90,11 @@ canvas {
     opacity: 100%;
 }
 
+.offstage {
+    opacity: 0%;
+    transition: 3s;
+}
+
 .onstage {
     opacity: 100%;
 }
