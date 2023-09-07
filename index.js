@@ -1,3 +1,14 @@
+const videos = document.querySelectorAll('video')
+
+videos.forEach(vid => {
+    vid.addEventListener('mouseover', () => {
+        vid.setAttribute('controls', 'controls')
+    }) 
+    vid.addEventListener('mouseleave', () => {
+        vid.removeAttribute('controls')
+    })
+})
+
 let selectedProject = null
 const projects = document.querySelectorAll('.project')
 
