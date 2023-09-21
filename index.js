@@ -3,7 +3,7 @@ const gitLogo = document.getElementById('git-logo')
 gitLogo.addEventListener('mouseenter', () => {
     gitLogo.style.backgroundColor = 'black'
     gitLogo.style.borderRadius = '50%'
-    gitLogo.style.border = '1px solid black'
+    gitLogo.style.border = '10px solid black'
     gitLogo.src = 'github-mark-white.png'
 })
 
