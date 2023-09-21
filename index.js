@@ -1,3 +1,18 @@
+const gitLogo = document.getElementById('git-logo')
+
+gitLogo.addEventListener('mouseenter', () => {
+    gitLogo.style.backgroundColor = 'black'
+    gitLogo.style.borderRadius = '50%'
+    gitLogo.style.border = '1px solid black'
+    gitLogo.src = 'github-mark-white.png'
+})
+
+gitLogo.addEventListener('mouseleave', () => {
+    gitLogo.style.backgroundColor = 'white'
+    gitLogo.style.border = 'none'
+    gitLogo.src = 'github-mark.png'
+})
+
 const videos = document.querySelectorAll('video')
 
 videos.forEach(vid => {
