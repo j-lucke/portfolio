@@ -67,10 +67,6 @@ canvas {
     margin: 10px;
 }
 
-#git-logo {
-
-}
-
 #intro {
    text-align: center;
    padding-bottom: 100px;
@@ -99,7 +95,7 @@ canvas {
 
 .project {
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     padding: 10px 10px;
     display: flex;
     flex-direction: row;
